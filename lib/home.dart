@@ -94,34 +94,29 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF101010),
+      appBar: AppBar(title: Text("HomePage"),
+      backgroundColor: Colors.green,
+      ),
+      backgroundColor: Colors.white,
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: 24),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 80),
-            // Center(
-            //   child: Text(
-            //     'TeachableMachines.com CNN',
-            //     style: TextStyle(color: Color(0xFFEEDA28), fontSize: 18),
-            //     textAlign: TextAlign.center,
-            //   ),
-            // ),
-            // SizedBox(
-            //   height: 6,
-            // ),
+            //SizedBox(height: 50),
             Center(
               child: Text(
                 'Detect Plant Disease ',
                 style: TextStyle(
-                    color: Color(0xFFE99600),
-                    fontWeight: FontWeight.w500,
-                    fontSize: 28),
+                        fontSize: 32,
+                        height: 2,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.green[700],
+                   ),
               ),
             ),
             SizedBox(
-              height: 40,
+              height: 20,
             ),
             Center(
               child: _loading
@@ -129,7 +124,7 @@ class _HomeState extends State<Home> {
                       width: 280,
                       child: Column(
                         children: [
-                          Image.asset('assets/soybean.JGP'),
+                          Image.asset("assets/murimilogo.jpeg"),
                           SizedBox(
                             height: 50,
                           )
@@ -172,7 +167,7 @@ class _HomeState extends State<Home> {
                       padding:
                           EdgeInsets.symmetric(horizontal: 24, vertical: 17),
                       decoration: BoxDecoration(
-                        color: Color(0xFFE99600),
+                        color: Colors.green[700],
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: Text(
@@ -192,7 +187,7 @@ class _HomeState extends State<Home> {
                       padding:
                           EdgeInsets.symmetric(horizontal: 24, vertical: 17),
                       decoration: BoxDecoration(
-                        color: Color(0xFFE99600),
+                        color: Colors.green[700],
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: Text(

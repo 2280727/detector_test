@@ -31,6 +31,14 @@ dependencies:
   cupertino_icons: ^1.0.2
   tflite: ^1.1.2
   image_picker: ^0.8.3
+  toast: ^0.1.5
+  flutter_spinkit: ^5.0.0
+  provider: ^5.0.0
+  syncfusion_flutter_signaturepad: ^19.1.66-beta
+  uuid: ^3.0.4
+  google_maps_flutter: ^2.0.6
+
+
 
 dev_dependencies:
   flutter_test:
@@ -49,8 +57,13 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/plant_labels.txt
-    - assets/plant_disease_model.tflite
+   - assets/plant_labels.txt
+   - assets/plant_disease_model.tflite
+   - assets/soybean.JPG
+   - assets/murimi.png
+   - assets/logo.png
+   - assets/log.png
+   - assets/murimilogo.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
