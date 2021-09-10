@@ -1,7 +1,7 @@
 
 import 'dart:ui';
 
-import 'package:detector_test/home.dart';
+import 'package:detector_test/screens/home.dart';
 import 'package:detector_test/login/login.dart';
 import 'package:flutter/material.dart';
 

@@ -1,8 +1,9 @@
 //import 'dart:html';
 import 'dart:ui';
-import 'package:detector_test/home.dart';
+import 'package:detector_test/screens/home.dart';
+import 'package:detector_test/screens/homepage.dart';
 import 'package:detector_test/register/register.dart';
-import 'package:detector_test/splashscreen.dart';
+import 'package:detector_test/screens/splashscreen.dart';
 import 'package:flutter/material.dart';
 
 
@@ -14,6 +15,8 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+
+  
   
   String error = '';
   bool loading = false;
@@ -136,7 +139,7 @@ class _LoginState extends State<Login> {
                         color: Colors.green[700],
                         textColor: Colors.white,
                         onPressed: (){
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => Home()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => HomePage()));
                           
                         },
                       ),
