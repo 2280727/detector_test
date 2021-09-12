@@ -12,8 +12,6 @@ class HomePage extends StatefulWidget
   
 }
 
- 
-
 class _HomePage extends State<HomePage>
 
   with SingleTickerProviderStateMixin {
@@ -25,6 +23,7 @@ class _HomePage extends State<HomePage>
     super.initState();
     _tabController = TabController(length: 3, vsync: this);
   }
+
   //Var for indexing
   int current_Index = 0;
 
@@ -33,8 +32,7 @@ class _HomePage extends State<HomePage>
     MarketPlace(),
     Home(),
     RegisterScreen(),
-    Home(),  
-    
+    Home(), 
   ];
 
   @override
@@ -42,14 +40,14 @@ class _HomePage extends State<HomePage>
   {
     
      return Scaffold(
-      appBar: AppBar(
+     /* appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0.0,
         centerTitle: true,
-        leading: IconButton(
+        /*leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Color(0xFF545D68)),
           onPressed: () {},
-        ),
+        ),*/
         title: Text('Pickup',
             style: TextStyle(
                 fontFamily: 'Varela',
@@ -61,7 +59,7 @@ class _HomePage extends State<HomePage>
             onPressed: () {},
           ),
         ],
-      ),
+      ),*/
       body: ListView(
         padding: EdgeInsets.only(left: 20.0),
         children: <Widget>[
@@ -117,14 +115,9 @@ class _HomePage extends State<HomePage>
         ],
       ),
 
-      /*floatingActionButton: FloatingActionButton(onPressed: () {},
-      backgroundColor: Colors.green,
-      child: Icon(Icons.fastfood),
-      ),*/
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: Bottomnav(),
       );
-
    
     /*
     return Scaffold

@@ -1,10 +1,9 @@
 import 'package:detector_test/register/register.dart';
+import 'package:detector_test/screens/cart.dart';
 import 'package:detector_test/screens/home.dart';
 import 'package:detector_test/screens/marketpage.dart';
+import 'package:detector_test/screens/profile.dart';
 import 'package:flutter/material.dart';
-
-
-
  
 
 class Bottomnav extends StatefulWidget {
@@ -25,8 +24,8 @@ class _Bottomnav extends State<Bottomnav>{
   final List<Widget> _children = [
     MarketPlace(),
     Home(),
-    RegisterScreen(),
-    Home(),  
+    Cart(),
+    Profile(),  
     
   ];
 
@@ -65,14 +64,14 @@ class _Bottomnav extends State<Bottomnav>{
              ),
 
           BottomNavigationBarItem(
-            icon: Icon(Icons.medical_services),
-            title: Text("Pesticides"),
+            icon: Icon(Icons.add_shopping_cart),
+            title: Text("Cart"),
             backgroundColor: Colors.green,
              ),
 
-             BottomNavigationBarItem(
-            icon: Icon(Icons.add_shopping_cart),
-            title: Text("Orders"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            title: Text("Profile"),
             backgroundColor: Colors.green,
              ),
 

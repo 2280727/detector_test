@@ -1,28 +1,36 @@
 import 'package:detector_test/botombar.dart';
 import 'package:detector_test/cookie.dart';
+import 'package:detector_test/register/register.dart';
+import 'package:detector_test/screens/home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MarketPlace extends StatefulWidget
-{ 
- 
-
-  
+{   
   @override
   _MarketPlace createState() => _MarketPlace(); 
- 
   
 }
 
 class _MarketPlace extends State<MarketPlace>
+with TickerProviderStateMixin
 {
-
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: ListView(
+        
         children: <Widget>[
           SizedBox(height: 15.0),
+
+              Text('Categories',
+              style: TextStyle(
+                  color: Colors.green,
+                  fontFamily: 'Varela',
+                  fontSize: 42.0,
+                  fontWeight: FontWeight.bold)),
+          SizedBox(height: 20.0),
+          
           Container(
               padding: EdgeInsets.only(right: 10.0),
               width: MediaQuery.of(context).size.width - 10.0,
@@ -34,21 +42,26 @@ class _MarketPlace extends State<MarketPlace>
                 mainAxisSpacing: 15.0,
                 childAspectRatio: 0.8,
                 children: <Widget>[
-                  _buildCard('Efekto Wonder Land Fertiliser', '\R140.00', 'assets/womder.png',
+                  _buildCard('Efekto Wonder Land Fertiliser', '\R140.00', 'assets/wonder.png',
                       false, false, context),
-                  _buildCard('Plant Insecticide', '\R100.00', 'assets/pluscide.png',
+                  _buildCard('Plant Insecticide', '\R100.00', 'assets/pluscide.jpg',
                       true, false, context),
                   _buildCard('Neem Oil', '\R109.99',
                       'assets/neemoil.png', false, true, context),
-                  _buildCard('Diatomaceous', '\R45.99', 'assets/diat.jpg',
-                      false, false, context)
+                  _buildCard('Diatomaceous', '\R45.99', 'assets/diat.png',
+                      false, false, context),
+                  _buildCard('Diatomaceous', '\R45.99', 'assets/diat.png',
+                      false, false, context),
+                  _buildCard('Diatomaceous', '\R45.99', 'assets/diat.png',
+                      false, false, context),
+
                 ],
               )),
-          SizedBox(height: 10.0)
+          SizedBox(height: 10.0),
+        
         ],
       ),
     );
-
   }
 
   Widget _buildCard(String name, String price, String imgPath, bool added,
@@ -80,21 +93,20 @@ class _MarketPlace extends State<MarketPlace>
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            isFavorite
-                                ? Icon(Icons.favorite, color: Colors.green)
-                                : Icon(Icons.favorite_border,
-                                    color: Colors.green)
+                            Icon(Icons.favorite_border,
+                                  color: Colors.green
+                                  )
                           ])),
                   Hero(
                       tag: imgPath,
                       child: Container(
-                          height: 30.0,
-                          width: 30.0,
+                          height: 100.0,
+                          width: 100.0,
                           decoration: BoxDecoration(
                               image: DecorationImage(
                                   image: AssetImage(imgPath),
                                   fit: BoxFit.contain)))),
-                  SizedBox(height: 7.0),
+                  SizedBox(height: 80.0),
                   Text(price,
                       style: TextStyle(
                           color: Colors.green,
@@ -105,7 +117,7 @@ class _MarketPlace extends State<MarketPlace>
                           color: Colors.green,
                           fontFamily: 'Varela',
                           fontSize: 14.0)),
-                  Padding(
+                 Padding(
                       padding: EdgeInsets.all(8.0),
                       child: Container(color: Colors.green, height: 1.0)),
                   Padding(
@@ -123,22 +135,19 @@ class _MarketPlace extends State<MarketPlace>
                                       fontSize: 12.0))
                             ],
                             if (added) ...[
-                              Icon(Icons.remove_circle_outline,
+                              Icon(Icons.shopping_basket,
                                   color: Colors.green, size: 12.0),
-                              Text('3',
+                              Text('Add to cart',
                                   style: TextStyle(
                                       fontFamily: 'Varela',
                                       color: Colors.green,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 12.0)),
-                              Icon(Icons.add_circle_outline,
-                                  color: Colors.green, size: 12.0),
+                                      fontSize: 12.0))
+                            
                             ]
                           ]))
                 ]))));
-
- 
   }
-      
+
+
+
 }
-  
